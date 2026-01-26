@@ -1,26 +1,485 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ============================================
+     SOVEREIGN STACK UNIFIED DESIGN TOKENS
+     ============================================ */
+
+  /* Alpha Protocol - Deep Blue (Protocol Foundation) */
+  --alpha-primary: #1e40af;
+  --alpha-accent: #3b82f6;
+  --alpha-light: #60a5fa;
+  --alpha-dark: #1e3a8a;
+
+  /* Omega Wireless - Electric Blue (Hardware Foundation) */
+  --omega-primary: #00aaff;
+  --omega-accent: #0088cc;
+  --omega-light: #4dc3ff;
+  --omega-dark: #006699;
+
+  /* PCG Dashboard - Emerald (Sovereign OS Interface) */
+  --pcg-primary: #10b981;
+  --pcg-accent: #059669;
+  --pcg-light: #34d399;
+  --pcg-dark: #047857;
+  /* Legacy aliases */
+  --pcg-emerald: #10b981;
+  --pcg-emerald-light: #34d399;
+  --pcg-emerald-dark: #059669;
+
+  /* Pythia AI - Purple (Emergent Intelligence) */
+  --pythia-primary: #8b5cf6;
+  --pythia-accent: #7c3aed;
+  --pythia-light: #a78bfa;
+  --pythia-dark: #6d28d9;
+
+  /* VIBE Token - Gold (Ecosystem Rewards) */
+  --vibe-primary: #f59e0b;
+  --vibe-accent: #d97706;
+  --vibe-light: #fbbf24;
+  --vibe-dark: #b45309;
+
+  /* Spectrum Galactic - Cyan (Global Connectivity) */
+  --spectrum-primary: #00d4ff;
+  --spectrum-accent: #0ea5e9;
+  --spectrum-light: #38bdf8;
+  --spectrum-dark: #0284c7;
+
+  /* Sovereign Stack Gold (Ecosystem Unity) */
+  --sovereign-gold: #C9A227;
+  --sovereign-gold-light: #E8D48A;
+  --sovereign-gold-dark: #8B7119;
+  /* Legacy aliases */
+  --gold: #C9A227;
+  --gold-light: #E8D48A;
+
+  /* Shared Neutral Palette */
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-surface: #16161d;
+  --bg-card: #1a1a22;
+  --bg-elevated: #222230;
+  /* Legacy aliases */
+  --pcg-black: #0a0a0f;
+  --pcg-dark: #111118;
+  --pcg-surface: #16161d;
+  --pcg-card: #1a1a22;
+
+  --border-default: #2a2a35;
+  --border-subtle: #1f1f28;
+  --border-strong: #3a3a48;
+  /* Legacy alias */
+  --pcg-border: #2a2a35;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  --text-subtle: #52525b;
+
+  /* Status Colors */
+  --status-success: #22c55e;
+  --status-success-bg: rgba(34, 197, 94, 0.1);
+  --status-warning: #eab308;
+  --status-warning-bg: rgba(234, 179, 8, 0.1);
+  --status-error: #ef4444;
+  --status-error-bg: rgba(239, 68, 68, 0.1);
+  --status-info: #3b82f6;
+  --status-info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Legacy accent colors */
+  --pcg-blue: #3b82f6;
+  --pcg-purple: #8b5cf6;
+  --pcg-orange: #f59e0b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--pcg-black);
+  --color-foreground: var(--text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background: var(--pcg-black);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Grid background pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Gradient backgrounds */
+.gradient-emerald {
+  background: linear-gradient(135deg, var(--pcg-emerald-dark) 0%, var(--pcg-emerald) 100%);
+}
+
+.gradient-dark {
+  background: linear-gradient(180deg, var(--pcg-dark) 0%, var(--pcg-black) 100%);
+}
+
+/* Text gradients */
+.text-gradient-emerald {
+  background: linear-gradient(135deg, var(--pcg-emerald-light) 0%, var(--pcg-emerald) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+.glow-gold {
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.3), 0 0 40px rgba(201, 162, 39, 0.1);
+}
+
+/* Card styles */
+.card {
+  background: var(--pcg-card);
+  border: 1px solid var(--pcg-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--pcg-emerald);
+  transform: translateY(-2px);
+}
+
+.card-static {
+  background: var(--pcg-card);
+  border: 1px solid var(--pcg-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--pcg-emerald) 0%, var(--pcg-emerald-dark) 100%);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--pcg-emerald);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--pcg-emerald);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--pcg-emerald);
+  color: white;
+}
+
+/* Dashboard widget styles */
+.widget {
+  background: var(--pcg-surface);
+  border: 1px solid var(--pcg-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.widget-title {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.widget-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Status indicators */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online {
+  background: var(--status-success);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.status-dot.offline {
+  background: var(--status-error);
+}
+
+.status-dot.warning {
+  background: var(--status-warning);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 8px;
+  background: var(--pcg-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pcg-emerald-dark), var(--pcg-emerald));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Stat card animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-animate {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+/* Navigation active state */
+.nav-item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  color: var(--text-primary);
+  background: var(--pcg-surface);
+}
+
+.nav-item.active {
+  color: var(--pcg-emerald);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* Feature icon containers */
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon.emerald {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--pcg-emerald);
+}
+
+.feature-icon.blue {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--pcg-blue);
+}
+
+.feature-icon.purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--pcg-purple);
+}
+
+.feature-icon.orange {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--pcg-orange);
+}
+
+.feature-icon.gold {
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--gold);
+}
+
+/* Table styles */
+.table-row {
+  display: grid;
+  padding: 1rem;
+  border-bottom: 1px solid var(--pcg-border);
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: var(--pcg-surface);
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge.success {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--status-success);
+}
+
+.badge.warning {
+  background: rgba(234, 179, 8, 0.1);
+  color: var(--status-warning);
+}
+
+.badge.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--status-error);
+}
+
+.badge.info {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--status-info);
+}
+
+/* ============================================
+   ECOSYSTEM TEXT GRADIENTS
+   ============================================ */
+
+.text-gradient-alpha {
+  background: linear-gradient(135deg, var(--alpha-light) 0%, var(--alpha-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-omega {
+  background: linear-gradient(135deg, var(--omega-light) 0%, var(--omega-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-pythia {
+  background: linear-gradient(135deg, var(--pythia-light) 0%, var(--pythia-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-vibe {
+  background: linear-gradient(135deg, var(--vibe-light) 0%, var(--vibe-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-spectrum {
+  background: linear-gradient(135deg, var(--spectrum-light) 0%, var(--spectrum-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sovereign {
+  background: linear-gradient(135deg, var(--sovereign-gold-light) 0%, var(--sovereign-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   ECOSYSTEM GLOW EFFECTS
+   ============================================ */
+
+.glow-alpha {
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.3), 0 0 40px rgba(30, 64, 175, 0.1);
+}
+
+.glow-omega {
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3), 0 0 40px rgba(0, 170, 255, 0.1);
+}
+
+.glow-pythia {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+}
+
+.glow-vibe {
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+}
+
+.glow-spectrum {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
+}
+
+.glow-sovereign {
+  box-shadow: 0 0 20px rgba(201, 162, 39, 0.3), 0 0 40px rgba(201, 162, 39, 0.1);
+}
+
+/* ============================================
+   ECOSYSTEM FEATURE ICONS
+   ============================================ */
+
+.feature-icon.alpha {
+  background: rgba(30, 64, 175, 0.1);
+  color: var(--alpha-primary);
+}
+
+.feature-icon.omega {
+  background: rgba(0, 170, 255, 0.1);
+  color: var(--omega-primary);
+}
+
+.feature-icon.pythia {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--pythia-primary);
+}
+
+.feature-icon.vibe {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--vibe-primary);
+}
+
+.feature-icon.spectrum {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--spectrum-primary);
+}
+
+.feature-icon.sovereign {
+  background: rgba(201, 162, 39, 0.1);
+  color: var(--sovereign-gold);
 }
