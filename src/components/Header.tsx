@@ -44,7 +44,7 @@ const ecosystemProjects = [
     shortName: "Pythia",
     description: "Emergent AI Intelligence",
     url: "https://pythia-ai.xyz",
-    color: "#8b5cf6",
+    color: "#3b82f6",
     layer: "Intelligence",
   },
   {
@@ -53,7 +53,7 @@ const ecosystemProjects = [
     shortName: "VIBE",
     description: "Ecosystem Rewards",
     url: "https://vibetoken.xyz",
-    color: "#f59e0b",
+    color: "#22c55e",
     layer: "Economics",
   },
   {
