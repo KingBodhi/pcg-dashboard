@@ -29,7 +29,7 @@ const ecosystemProjects = [
   {
     id: "pythia",
     name: "Pythia AI",
-    url: "https://pythia-ai.vercel.app",
+    url: "https://pythia-ai-web.vercel.app",
     color: "#3b82f6",
   },
   {
@@ -93,36 +93,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Developers */}
-          <div>
-            <h4 className="font-semibold text-[var(--gold)] mb-4">Developers</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/developers" className="text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/developers#quickstart" className="text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors">
-                  Quick Start
-                </Link>
-              </li>
-              <li>
-                <Link href="/developers#api-reference" className="text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors">
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link href="/developers#sdks" className="text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors">
-                  SDKs
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Sovereign Stack Ecosystem */}
           <div>
-            <h4 className="font-semibold text-[var(--text-primary)] mb-4">Sovereign Stack</h4>
+            <h4 className="font-semibold text-[var(--sovereign-gold)] mb-4">Sovereign Stack</h4>
             <ul className="space-y-2">
               {ecosystemProjects.map((project) => (
                 <li key={project.id}>
@@ -144,6 +117,33 @@ export default function Footer() {
                   )}
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Backed By */}
+          <div>
+            <h4 className="font-semibold text-[var(--text-primary)] mb-4">Backed By</h4>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://powerclubglobal.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[var(--text-muted)] hover:text-[var(--gold)] transition-colors"
+                >
+                  PowerClub Global
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://okb-ventures.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-[var(--text-muted)] hover:text-[var(--sovereign-gold)] transition-colors"
+                >
+                  OKB Ventures
+                </a>
+              </li>
             </ul>
           </div>
         </div>

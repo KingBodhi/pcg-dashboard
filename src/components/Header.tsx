@@ -52,7 +52,7 @@ const ecosystemProjects = [
     name: "Pythia AI",
     shortName: "Pythia",
     description: "Emergent AI Intelligence",
-    url: "https://pythia-ai.vercel.app",
+    url: "https://pythia-ai-web.vercel.app",
     color: "#3b82f6",
     layer: "Intelligence",
   },
