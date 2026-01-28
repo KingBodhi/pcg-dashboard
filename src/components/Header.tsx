@@ -16,8 +16,8 @@ const ecosystemProjects = [
     name: "Alpha Protocol",
     shortName: "Alpha",
     description: "Protocol Foundation - P2P Connections",
-    url: "https://alphaprotocol.network",
-    color: "#1e40af",
+    url: "https://alpha-protocol-web.vercel.app",
+    color: "#dc2626",
     layer: "Layer 0",
   },
   {
@@ -25,44 +25,44 @@ const ecosystemProjects = [
     name: "Omega Wireless",
     shortName: "Omega",
     description: "Hardware Foundation - Physical Access",
-    url: "https://omegawireless.xyz",
-    color: "#00aaff",
+    url: "https://omega-wireless.vercel.app",
+    color: "#f97316",
     layer: "Layer 1",
   },
   {
     id: "vibertas",
     name: "Vibertas",
-    shortName: "Vibertas",
-    description: "Privacy-First Operating System",
+    shortName: "Viber",
+    description: "Sovereign OS - Privacy-First Operating System",
     url: "#",
-    color: "#ae904c",
+    color: "#eab308",
     layer: "OS Layer",
-  },
-  {
-    id: "pythia",
-    name: "Pythia AI",
-    shortName: "Pythia",
-    description: "Emergent AI Intelligence",
-    url: "https://pythia-ai.xyz",
-    color: "#3b82f6",
-    layer: "Intelligence",
   },
   {
     id: "vibe",
     name: "VIBE Token",
     shortName: "VIBE",
     description: "Ecosystem Rewards",
-    url: "https://vibetoken.xyz",
+    url: "https://vibe-token.vercel.app",
     color: "#22c55e",
     layer: "Economics",
+  },
+  {
+    id: "pythia",
+    name: "Pythia AI",
+    shortName: "Pythia",
+    description: "Emergent AI Intelligence",
+    url: "https://pythia-ai.vercel.app",
+    color: "#3b82f6",
+    layer: "Intelligence",
   },
   {
     id: "spectrum",
     name: "Spectrum Galactic",
     shortName: "Spectrum",
     description: "Global Satellite Coverage",
-    url: "https://spectrumgalactic.xyz",
-    color: "#00d4ff",
+    url: "https://spectrum-galactic.vercel.app",
+    color: "#8b5cf6",
     layer: "Connectivity",
   },
 ];
@@ -87,7 +87,7 @@ export default function Header() {
                 <div className="flex items-center gap-2">
                   <div
                     className="w-2 h-2 rounded-full"
-                    style={{ background: "#ae904c" }}
+                    style={{ background: "#eab308" }}
                   />
                   <span className="text-sm font-medium text-[var(--text-primary)]">
                     Viber
