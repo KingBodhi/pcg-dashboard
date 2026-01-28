@@ -2,80 +2,51 @@
 
 :root {
   /* ============================================
-     SOVEREIGN STACK UNIFIED DESIGN TOKENS
+     CLAWD.BOT INSPIRED DESIGN TOKENS
+     With PCG Gold Accents
      ============================================ */
 
-  /* Alpha Protocol - Deep Blue (Protocol Foundation) */
+  /* Primary Colors (clawd.bot inspired) */
+  --bg-primary: #050810;
+  --bg-surface: #111827;
+  --bg-card: #1a1f2e;
+  --bg-elevated: #222836;
+
+  /* Accent Colors */
+  --coral: #ff4d4d;
+  --coral-dark: #e63e3e;
+  --coral-light: #ff6b6b;
+  --cyan: #00e5cc;
+  --cyan-dark: #00c4af;
+  --cyan-light: #33edd8;
+  --gold: #ae904c;
+  --gold-light: #c9a86a;
+  --gold-dark: #8a7240;
+
+  /* Text Colors */
+  --text-primary: #f0f4ff;
+  --text-secondary: #8892b0;
+  --text-muted: #5f6a85;
+
+  /* Border Colors */
+  --border-default: #1e2536;
+  --border-subtle: #151b27;
+  --border-strong: #2a3548;
+
+  /* Legacy Sovereign Stack Colors (for ecosystem compatibility) */
   --alpha-primary: #1e40af;
   --alpha-accent: #3b82f6;
-  --alpha-light: #60a5fa;
-  --alpha-dark: #1e3a8a;
-
-  /* Omega Wireless - Electric Blue (Hardware Foundation) */
   --omega-primary: #00aaff;
-  --omega-accent: #0088cc;
-  --omega-light: #4dc3ff;
-  --omega-dark: #006699;
-
-  /* PCG Dashboard - Emerald (Sovereign OS Interface) */
   --pcg-primary: #10b981;
-  --pcg-accent: #059669;
-  --pcg-light: #34d399;
-  --pcg-dark: #047857;
-  /* Legacy aliases */
   --pcg-emerald: #10b981;
   --pcg-emerald-light: #34d399;
   --pcg-emerald-dark: #059669;
-
-  /* Pythia AI - Purple (Emergent Intelligence) */
   --pythia-primary: #8b5cf6;
-  --pythia-accent: #7c3aed;
-  --pythia-light: #a78bfa;
-  --pythia-dark: #6d28d9;
-
-  /* VIBE Token - Gold (Ecosystem Rewards) */
   --vibe-primary: #f59e0b;
-  --vibe-accent: #d97706;
-  --vibe-light: #fbbf24;
-  --vibe-dark: #b45309;
-
-  /* Spectrum Galactic - Cyan (Global Connectivity) */
   --spectrum-primary: #00d4ff;
-  --spectrum-accent: #0ea5e9;
-  --spectrum-light: #38bdf8;
-  --spectrum-dark: #0284c7;
-
-  /* Sovereign Stack Gold (Ecosystem Unity) */
-  --sovereign-gold: #C9A227;
-  --sovereign-gold-light: #E8D48A;
-  --sovereign-gold-dark: #8B7119;
-  /* Legacy aliases */
-  --gold: #C9A227;
-  --gold-light: #E8D48A;
-
-  /* Shared Neutral Palette */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #111118;
-  --bg-surface: #16161d;
-  --bg-card: #1a1a22;
-  --bg-elevated: #222230;
-  /* Legacy aliases */
-  --pcg-black: #0a0a0f;
-  --pcg-dark: #111118;
-  --pcg-surface: #16161d;
-  --pcg-card: #1a1a22;
-
-  --border-default: #2a2a35;
-  --border-subtle: #1f1f28;
-  --border-strong: #3a3a48;
-  /* Legacy alias */
-  --pcg-border: #2a2a35;
-
-  /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
-  --text-subtle: #52525b;
+  --sovereign-gold: #ae904c;
+  --sovereign-gold-light: #c9a86a;
+  --sovereign-gold-dark: #8a7240;
 
   /* Status Colors */
   --status-success: #22c55e;
@@ -87,45 +58,66 @@
   --status-info: #3b82f6;
   --status-info-bg: rgba(59, 130, 246, 0.1);
 
-  /* Legacy accent colors */
-  --pcg-blue: #3b82f6;
-  --pcg-purple: #8b5cf6;
-  --pcg-orange: #f59e0b;
+  /* Legacy aliases for compatibility */
+  --pcg-black: var(--bg-primary);
+  --pcg-dark: var(--bg-surface);
+  --pcg-surface: var(--bg-surface);
+  --pcg-card: var(--bg-card);
+  --pcg-border: var(--border-default);
 }
 
 @theme inline {
-  --color-background: var(--pcg-black);
+  --color-background: var(--bg-primary);
   --color-foreground: var(--text-primary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-clash), var(--font-satoshi), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+  --font-display: var(--font-clash), system-ui, sans-serif;
 }
 
 body {
-  background: var(--pcg-black);
+  background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-satoshi), system-ui, sans-serif;
 }
 
-/* Grid background pattern */
-.grid-pattern {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-clash), system-ui, sans-serif;
+}
+
+/* ============================================
+   NAVY GRID BACKGROUND
+   ============================================ */
+
+.navy-grid-bg {
+  background-color: var(--bg-primary);
   background-image:
-    linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(174, 144, 76, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(174, 144, 76, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  position: relative;
 }
 
-/* Gradient backgrounds */
-.gradient-emerald {
-  background: linear-gradient(135deg, var(--pcg-emerald-dark) 0%, var(--pcg-emerald) 100%);
+.navy-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(174, 144, 76, 0.08) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-.gradient-dark {
-  background: linear-gradient(180deg, var(--pcg-dark) 0%, var(--pcg-black) 100%);
+/* ============================================
+   TEXT GRADIENTS
+   ============================================ */
+
+.text-gradient-coral {
+  background: linear-gradient(135deg, var(--coral-light) 0%, var(--coral) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Text gradients */
-.text-gradient-emerald {
-  background: linear-gradient(135deg, var(--pcg-emerald-light) 0%, var(--pcg-emerald) 100%);
+.text-gradient-cyan {
+  background: linear-gradient(135deg, var(--cyan-light) 0%, var(--cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -138,99 +130,158 @@ body {
   background-clip: text;
 }
 
-/* Glow effects */
-.glow-emerald {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3), 0 0 40px rgba(16, 185, 129, 0.1);
+/* Legacy gradients for ecosystem compatibility */
+.text-gradient-emerald {
+  background: linear-gradient(135deg, var(--pcg-emerald-light) 0%, var(--pcg-emerald) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-sovereign {
+  background: linear-gradient(135deg, var(--sovereign-gold-light) 0%, var(--sovereign-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   GLOW EFFECTS
+   ============================================ */
+
+.glow-coral {
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.3), 0 0 40px rgba(255, 77, 77, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 229, 204, 0.3), 0 0 40px rgba(0, 229, 204, 0.1);
 }
 
 .glow-gold {
-  box-shadow: 0 0 20px rgba(201, 162, 39, 0.3), 0 0 40px rgba(201, 162, 39, 0.1);
+  box-shadow: 0 0 20px rgba(174, 144, 76, 0.3), 0 0 40px rgba(174, 144, 76, 0.1);
 }
 
-/* Card styles */
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
+  color: var(--bg-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 229, 204, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gold);
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--bg-primary);
+}
+
+/* ============================================
+   CARD STYLES
+   ============================================ */
+
 .card {
-  background: var(--pcg-card);
-  border: 1px solid var(--pcg-border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
   border-radius: 1rem;
   padding: 1.5rem;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  border-color: var(--pcg-emerald);
+  border-color: var(--gold);
   transform: translateY(-2px);
 }
 
 .card-static {
-  background: var(--pcg-card);
-  border: 1px solid var(--pcg-border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
   border-radius: 1rem;
   padding: 1.5rem;
 }
 
-/* Button styles */
-.btn-primary {
-  background: linear-gradient(135deg, var(--pcg-emerald) 0%, var(--pcg-emerald-dark) 100%);
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-decoration: none;
-}
+/* ============================================
+   FEATURE ICON STYLES
+   ============================================ */
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--pcg-emerald);
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--pcg-emerald);
-  transition: all 0.3s ease;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.btn-secondary:hover {
-  background: var(--pcg-emerald);
-  color: white;
-}
-
-/* Dashboard widget styles */
-.widget {
-  background: var(--pcg-surface);
-  border: 1px solid var(--pcg-border);
-  border-radius: 0.75rem;
-  padding: 1.25rem;
-}
-
-.widget-header {
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  justify-content: center;
 }
 
-.widget-title {
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.feature-icon.coral {
+  background: rgba(255, 77, 77, 0.1);
+  color: var(--coral);
 }
 
-.widget-value {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
+.feature-icon.cyan {
+  background: rgba(0, 229, 204, 0.1);
+  color: var(--cyan);
 }
 
-/* Status indicators */
+.feature-icon.gold {
+  background: rgba(174, 144, 76, 0.1);
+  color: var(--gold);
+}
+
+.feature-icon.pythia {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--pythia-primary);
+}
+
+.feature-icon.alpha {
+  background: rgba(30, 64, 175, 0.1);
+  color: var(--alpha-primary);
+}
+
+.feature-icon.omega {
+  background: rgba(0, 170, 255, 0.1);
+  color: var(--omega-primary);
+}
+
+.feature-icon.vibe {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--vibe-primary);
+}
+
+.feature-icon.spectrum {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--spectrum-primary);
+}
+
+/* ============================================
+   STATUS INDICATORS
+   ============================================ */
+
 .status-dot {
   width: 8px;
   height: 8px;
@@ -256,97 +307,10 @@ body {
   50% { opacity: 0.7; transform: scale(1.1); }
 }
 
-/* Progress bar */
-.progress-bar {
-  height: 8px;
-  background: var(--pcg-border);
-  border-radius: 4px;
-  overflow: hidden;
-}
+/* ============================================
+   BADGE STYLES
+   ============================================ */
 
-.progress-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--pcg-emerald-dark), var(--pcg-emerald));
-  border-radius: 4px;
-  transition: width 0.5s ease;
-}
-
-/* Stat card animation */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.stat-animate {
-  animation: countUp 0.5s ease-out forwards;
-}
-
-/* Navigation active state */
-.nav-item {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  color: var(--text-secondary);
-  transition: all 0.2s ease;
-}
-
-.nav-item:hover {
-  color: var(--text-primary);
-  background: var(--pcg-surface);
-}
-
-.nav-item.active {
-  color: var(--pcg-emerald);
-  background: rgba(16, 185, 129, 0.1);
-}
-
-/* Feature icon containers */
-.feature-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.feature-icon.emerald {
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--pcg-emerald);
-}
-
-.feature-icon.blue {
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--pcg-blue);
-}
-
-.feature-icon.purple {
-  background: rgba(139, 92, 246, 0.1);
-  color: var(--pcg-purple);
-}
-
-.feature-icon.orange {
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--pcg-orange);
-}
-
-.feature-icon.gold {
-  background: rgba(201, 162, 39, 0.1);
-  color: var(--gold);
-}
-
-/* Table styles */
-.table-row {
-  display: grid;
-  padding: 1rem;
-  border-bottom: 1px solid var(--pcg-border);
-  transition: background 0.2s ease;
-}
-
-.table-row:hover {
-  background: var(--pcg-surface);
-}
-
-/* Badge styles */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -371,115 +335,199 @@ body {
   color: var(--status-error);
 }
 
-.badge.info {
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--status-info);
+.badge.gold {
+  background: rgba(174, 144, 76, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(174, 144, 76, 0.3);
 }
 
 /* ============================================
-   ECOSYSTEM TEXT GRADIENTS
+   PRICING CARD STYLES
    ============================================ */
 
-.text-gradient-alpha {
-  background: linear-gradient(135deg, var(--alpha-light) 0%, var(--alpha-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
 }
 
-.text-gradient-omega {
-  background: linear-gradient(135deg, var(--omega-light) 0%, var(--omega-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.pricing-card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
 }
 
-.text-gradient-pythia {
-  background: linear-gradient(135deg, var(--pythia-light) 0%, var(--pythia-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.pricing-card.popular {
+  border-color: var(--gold);
+  position: relative;
 }
 
-.text-gradient-vibe {
-  background: linear-gradient(135deg, var(--vibe-light) 0%, var(--vibe-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-spectrum {
-  background: linear-gradient(135deg, var(--spectrum-light) 0%, var(--spectrum-primary) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-sovereign {
-  background: linear-gradient(135deg, var(--sovereign-gold-light) 0%, var(--sovereign-gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.pricing-card.popular::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 /* ============================================
-   ECOSYSTEM GLOW EFFECTS
+   CODE/COMMAND BLOCK
    ============================================ */
 
-.glow-alpha {
-  box-shadow: 0 0 20px rgba(30, 64, 175, 0.3), 0 0 40px rgba(30, 64, 175, 0.1);
+.code-block {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  overflow-x: auto;
 }
 
-.glow-omega {
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.3), 0 0 40px rgba(0, 170, 255, 0.1);
+.code-block .prompt {
+  color: var(--cyan);
 }
 
-.glow-pythia {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.1);
+.code-block .command {
+  color: var(--text-primary);
 }
 
-.glow-vibe {
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
-}
-
-.glow-spectrum {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.1);
-}
-
-.glow-sovereign {
-  box-shadow: 0 0 20px rgba(201, 162, 39, 0.3), 0 0 40px rgba(201, 162, 39, 0.1);
+.code-block .comment {
+  color: var(--text-muted);
 }
 
 /* ============================================
-   ECOSYSTEM FEATURE ICONS
+   NAVIGATION STYLES
    ============================================ */
 
-.feature-icon.alpha {
-  background: rgba(30, 64, 175, 0.1);
-  color: var(--alpha-primary);
+.nav-item {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
 }
 
-.feature-icon.omega {
-  background: rgba(0, 170, 255, 0.1);
-  color: var(--omega-primary);
+.nav-item:hover {
+  color: var(--text-primary);
+  background: var(--bg-surface);
 }
 
-.feature-icon.pythia {
-  background: rgba(139, 92, 246, 0.1);
-  color: var(--pythia-primary);
+.nav-item.active {
+  color: var(--cyan);
+  background: rgba(0, 229, 204, 0.1);
 }
 
-.feature-icon.vibe {
-  background: rgba(245, 158, 11, 0.1);
-  color: var(--vibe-primary);
+/* ============================================
+   SECURITY BADGE STYLES
+   ============================================ */
+
+.security-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
 }
 
-.feature-icon.spectrum {
-  background: rgba(0, 212, 255, 0.1);
-  color: var(--spectrum-primary);
+.security-badge:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
 }
 
-.feature-icon.sovereign {
-  background: rgba(201, 162, 39, 0.1);
-  color: var(--sovereign-gold);
+.security-badge svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--cyan);
+}
+
+/* ============================================
+   INTEGRATION LOGO SCROLL
+   ============================================ */
+
+.integration-scroll {
+  display: flex;
+  gap: 3rem;
+  animation: scroll 30s linear infinite;
+}
+
+.integration-scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.integration-logo {
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  filter: grayscale(100%);
+}
+
+.integration-logo:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .pricing-card {
+    padding: 1.5rem;
+  }
 }

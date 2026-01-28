@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Space_Grotesk, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Space Grotesk - Bold geometric headlines (similar to Clash Display)
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  variable: "--font-clash",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+// Inter - Clean modern body text (similar to Satoshi)
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-satoshi",
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -16,11 +26,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "PowerClub Global - Sovereign Stack Dashboard",
-    template: "%s | PowerClub Global",
+    default: "Vibertas - Own Your Digital Life",
+    template: "%s | Vibertas",
   },
-  description: "The unified interface for the Sovereign Stack. Manage your digital sovereignty from one powerful dashboard.",
-  keywords: ["dashboard", "sovereign stack", "privacy", "decentralized", "alpha protocol", "omega", "vibe token"],
+  description: "Vibertas is the operating system for the Sovereign Stack. Privacy-first OS for personal devices, smart homes, wearables, and enterprise with mesh networking, AI, and token economics.",
+  keywords: ["vibertas", "sovereign stack", "privacy os", "mesh network", "pcg dashboard", "alpha protocol", "omega", "vibe token", "pythia ai", "powerclub global"],
 };
 
 export default function RootLayout({
@@ -31,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${inter.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>
