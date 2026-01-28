@@ -162,7 +162,7 @@ export default function Header() {
                               {project.layer}
                             </span>
                           </div>
-                          {project.id !== "pcg" && (
+                          {project.id !== "vibertas" && (
                             <svg
                               className="w-4 h-4 text-[var(--text-muted)] flex-shrink-0 mt-1"
                               fill="none"
@@ -234,7 +234,7 @@ export default function Header() {
             >
               <div
                 className="w-2 h-2 rounded-full"
-                style={{ background: "#ae904c" }}
+                style={{ background: "#eab308" }}
               />
               <svg
                 className={`w-3.5 h-3.5 text-[var(--text-muted)] transition-transform ${ecosystemOpen ? "rotate-180" : ""}`}

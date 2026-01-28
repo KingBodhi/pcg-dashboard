@@ -33,17 +33,22 @@
   --border-subtle: #151b27;
   --border-strong: #2a3548;
 
-  /* Legacy Sovereign Stack Colors (for ecosystem compatibility) */
-  --alpha-primary: #1e40af;
-  --alpha-accent: #3b82f6;
-  --omega-primary: #00aaff;
-  --pcg-primary: #10b981;
-  --pcg-emerald: #10b981;
-  --pcg-emerald-light: #34d399;
-  --pcg-emerald-dark: #059669;
+  /* Sovereign Stack Rainbow Colors */
+  --ss-alpha: #dc2626;      /* Red */
+  --ss-omega: #f97316;      /* Orange */
+  --ss-vibertas: #eab308;   /* Yellow */
+  --ss-vibe: #22c55e;       /* Green */
+  --ss-pythia: #3b82f6;     /* Blue */
+  --ss-spectrum: #8b5cf6;   /* Purple */
+
+  /* Legacy aliases for compatibility */
+  --alpha-primary: #dc2626;
+  --alpha-accent: #ef4444;
+  --omega-primary: #f97316;
+  --vibertas-primary: #eab308;
   --pythia-primary: #3b82f6;
   --vibe-primary: #22c55e;
-  --spectrum-primary: #00d4ff;
+  --spectrum-primary: #8b5cf6;
   --sovereign-gold: #ae904c;
   --sovereign-gold-light: #c9a86a;
   --sovereign-gold-dark: #8a7240;
@@ -259,22 +264,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-icon.alpha {
-  background: rgba(30, 64, 175, 0.1);
+  background: rgba(220, 38, 38, 0.1);
   color: var(--alpha-primary);
 }
 
 .feature-icon.omega {
-  background: rgba(0, 170, 255, 0.1);
+  background: rgba(249, 115, 22, 0.1);
   color: var(--omega-primary);
 }
 
 .feature-icon.vibe {
-  background: rgba(245, 158, 11, 0.1);
+  background: rgba(34, 197, 94, 0.1);
   color: var(--vibe-primary);
 }
 
 .feature-icon.spectrum {
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(139, 92, 246, 0.1);
   color: var(--spectrum-primary);
 }
 

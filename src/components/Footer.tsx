@@ -4,39 +4,39 @@ const ecosystemProjects = [
   {
     id: "alpha",
     name: "Alpha Protocol",
-    url: "https://alphaprotocol.network",
-    color: "#1e40af",
+    url: "https://alpha-protocol-web.vercel.app",
+    color: "#dc2626",
   },
   {
     id: "omega",
     name: "Omega Wireless",
-    url: "https://omegawireless.xyz",
-    color: "#00aaff",
+    url: "https://omega-wireless.vercel.app",
+    color: "#f97316",
   },
   {
     id: "vibertas",
     name: "Vibertas",
     url: "#",
-    color: "#ae904c",
+    color: "#eab308",
     current: true,
-  },
-  {
-    id: "pythia",
-    name: "Pythia AI",
-    url: "https://pythia-ai.xyz",
-    color: "#8b5cf6",
   },
   {
     id: "vibe",
     name: "VIBE Token",
-    url: "https://vibetoken.xyz",
-    color: "#f59e0b",
+    url: "https://vibe-token.vercel.app",
+    color: "#22c55e",
+  },
+  {
+    id: "pythia",
+    name: "Pythia AI",
+    url: "https://pythia-ai.vercel.app",
+    color: "#3b82f6",
   },
   {
     id: "spectrum",
     name: "Spectrum Galactic",
-    url: "https://spectrumgalactic.xyz",
-    color: "#00d4ff",
+    url: "https://spectrum-galactic.vercel.app",
+    color: "#8b5cf6",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/dashboard" className="text-sm text-[var(--text-muted)] hover:text-[var(--cyan)] transition-colors">
-                  PCG Dashboard
+                  Dashboard
                 </Link>
               </li>
             </ul>
