@@ -68,25 +68,25 @@ export default function Footer() {
 
           {/* Product */}
           <div>
-            <h4 className="font-semibold text-[var(--cyan)] mb-4">Product</h4>
+            <h4 className="font-semibold text-[var(--yellow)] mb-4">Product</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/features" className="text-sm text-[var(--text-muted)] hover:text-[var(--cyan)] transition-colors">
+                <Link href="/features" className="text-sm text-[var(--text-muted)] hover:text-[var(--yellow)] transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-sm text-[var(--text-muted)] hover:text-[var(--cyan)] transition-colors">
+                <Link href="/pricing" className="text-sm text-[var(--text-muted)] hover:text-[var(--yellow)] transition-colors">
                   Pricing
                 </Link>
               </li>
               <li>
-                <Link href="/enterprise" className="text-sm text-[var(--text-muted)] hover:text-[var(--cyan)] transition-colors">
+                <Link href="/enterprise" className="text-sm text-[var(--text-muted)] hover:text-[var(--yellow)] transition-colors">
                   Enterprise
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard" className="text-sm text-[var(--text-muted)] hover:text-[var(--cyan)] transition-colors">
+                <Link href="/dashboard" className="text-sm text-[var(--text-muted)] hover:text-[var(--yellow)] transition-colors">
                   Dashboard
                 </Link>
               </li>

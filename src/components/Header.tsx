@@ -211,7 +211,7 @@ export default function Header() {
               href="https://app.vibertas.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[var(--text-secondary)] hover:text-[var(--cyan)] transition-colors text-sm font-medium"
+              className="text-[var(--text-secondary)] hover:text-[var(--yellow)] transition-colors text-sm font-medium"
             >
               Launch App
             </a>
@@ -327,7 +327,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-2 text-[var(--text-secondary)] hover:text-[var(--cyan)] transition-colors"
+                className="block py-2 text-[var(--text-secondary)] hover:text-[var(--yellow)] transition-colors"
               >
                 {item.label}
               </Link>
@@ -337,7 +337,7 @@ export default function Header() {
                 href="https://app.vibertas.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-2 text-[var(--text-secondary)] hover:text-[var(--cyan)]"
+                className="block py-2 text-[var(--text-secondary)] hover:text-[var(--yellow)]"
               >
                 Launch App
               </a>

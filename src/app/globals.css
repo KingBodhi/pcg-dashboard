@@ -12,16 +12,21 @@
   --bg-card: #1a1f2e;
   --bg-elevated: #222836;
 
-  /* Accent Colors */
-  --coral: #ff4d4d;
-  --coral-dark: #e63e3e;
-  --coral-light: #ff6b6b;
-  --cyan: #00e5cc;
-  --cyan-dark: #00c4af;
-  --cyan-light: #33edd8;
+  /* Accent Colors - Vibertas Yellow Theme */
+  --yellow: #eab308;
+  --yellow-dark: #ca8a04;
+  --yellow-light: #facc15;
   --gold: #ae904c;
   --gold-light: #c9a86a;
   --gold-dark: #8a7240;
+
+  /* Legacy accent aliases */
+  --coral: #eab308;
+  --coral-dark: #ca8a04;
+  --coral-light: #facc15;
+  --cyan: #eab308;
+  --cyan-dark: #ca8a04;
+  --cyan-light: #facc15;
 
   /* Text Colors */
   --text-primary: #f0f4ff;
@@ -121,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
   background-clip: text;
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, var(--cyan-light) 0%, var(--cyan) 100%);
+.text-gradient-cyan, .text-gradient-yellow {
+  background: linear-gradient(135deg, var(--yellow-light) 0%, var(--yellow) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -158,8 +163,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 20px rgba(255, 77, 77, 0.3), 0 0 40px rgba(255, 77, 77, 0.1);
 }
 
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 229, 204, 0.3), 0 0 40px rgba(0, 229, 204, 0.1);
+.glow-cyan, .glow-yellow {
+  box-shadow: 0 0 20px rgba(234, 179, 8, 0.3), 0 0 40px rgba(234, 179, 8, 0.1);
 }
 
 .glow-gold {
@@ -171,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
+  background: var(--yellow);
   color: var(--bg-primary);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -184,8 +189,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
+  background: var(--yellow-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 229, 204, 0.4);
+  box-shadow: 0 4px 20px rgba(234, 179, 8, 0.4);
 }
 
 .btn-secondary {
@@ -248,9 +254,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--coral);
 }
 
-.feature-icon.cyan {
-  background: rgba(0, 229, 204, 0.1);
-  color: var(--cyan);
+.feature-icon.cyan, .feature-icon.yellow {
+  background: rgba(234, 179, 8, 0.1);
+  color: var(--yellow);
 }
 
 .feature-icon.gold {
@@ -398,7 +404,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .code-block .prompt {
-  color: var(--cyan);
+  color: var(--yellow);
 }
 
 .code-block .command {
@@ -426,8 +432,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-item.active {
-  color: var(--cyan);
-  background: rgba(0, 229, 204, 0.1);
+  color: var(--yellow);
+  background: rgba(234, 179, 8, 0.1);
 }
 
 /* ============================================
@@ -448,14 +454,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .security-badge:hover {
-  border-color: var(--cyan);
-  color: var(--cyan);
+  border-color: var(--yellow);
+  color: var(--yellow);
 }
 
 .security-badge svg {
   width: 1.25rem;
   height: 1.25rem;
-  color: var(--cyan);
+  color: var(--yellow);
 }
 
 /* ============================================
